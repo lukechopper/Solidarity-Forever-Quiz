@@ -1,0 +1,112 @@
+@font-face {
+  font-family: TheFrontman;
+  src: url("fonts/TheFrontman.ttf");
+}
+
+body {
+  background-color: black !important;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+#logo {
+  font-family: TheFrontman;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#start-btn {
+  font-family: TheFrontman;
+  color: black;
+  background-color: white;
+  margin-top: 70px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#start-btn:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+/* Video Screen */
+
+#begin-btn {
+  font-family: TheFrontman;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#begin-btn:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+/* Quiz Screen */
+.white-card {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  height: 100vh;
+  width: 90vw;
+}
+
+.gray-card {
+  background-color: #dddddd;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  width: 98%;
+  overflow: auto;
+}
+
+.quiz-header-text {
+  text-align: center !important;
+  font-weight: bold !important;
+}
+
+hr {
+  border-top: 3px solid #8c8b8b !important;
+  width: 90% !important;
+}
+
+#q-card {
+  background-color: #eeeeee;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.btn-cust {
+  margin-top: 20px;
+  width: 70%;
+}
+
+/* Score */
+#score {
+  font-family: TheFrontman;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
