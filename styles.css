@@ -104,9 +104,29 @@ hr {
 #score {
   font-family: TheFrontman;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 50px;
+}
+
+#score-btn {
+  font-family: TheFrontman;
+  color: black;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#score-btn:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: black !important;
+  text-decoration: none !important;
 }

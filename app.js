@@ -16,26 +16,26 @@ let bTT = $("#bt-t");
 let bTF = $("#bt-f");
 
 //Questions
-let questionStack = ["Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ that needed to be dealt with.",
-"In the Theory of Moral Sentiments Adam Smith (the father of economics) wrote about how empathy has intrinsic to the human species. Thorstein Veblen wrote about ‘conspicuous consumption’ and how the functioning’s of a capitalist system has perverted the human psyche to be materialistic and attracted to the superfluous.",
+let questionStack = ["Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ which needed to be dealt with. ",
+"Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ which needed to be dealt with.",
 "In 2007 just before the financial crash, Wall Street shared 40% of all corporate profits in the US.",
-"In Aristotle’s Politics, Book III, chapter 8. He postulated that a true democracy would result in socialism because the poor majority would have the democratic means to take away the property of the rich.",
+"In Aristotle’s Politics, Book III, chapter 8, he postulated that a true democracy would result in socialism because the poor majority would have the democratic means to take away the property of the rich.",
 "Historically unions were very effective in achieving labour rights such as the 8-hour day and scrapping child labour. The UK Government deprived workers of the right to strike in 1992.",
-"For Thatcher, having no society only individuals were an ideal. For Marx it was a criticism, as it would turn people into ‘sacks of potatoes’ who have no means of influencing policy.",
-"Thatcher labelled the 1984 strikers as ‘the enemy within’. Despite this she undemocratically crushed them and used Soviet like secret police to infiltrate and weaken them from the inside.",
-"Neo-liberalism is founded on the idea that citizens should be turned into consumers instead of being active participants in a democratic society. Lassie faire markets is inimical to human nature because it is linked to higher depression, eating disorders, deaths of despair and addiction.",
+"For Thatcher having no society only individuals, was an ideal. For Marx it was a criticism as it would turn people into disenfranchised ‘sacks of potatoes’ who have no means of assembly to help them influence policy.",
+"Thatcher labelled the 1984 strikers as ‘the enemy within’. She however, decided to utilise an undemocratic police state to not only crush them but also infiltrate them so that they could be weakened from the inside.",
+"Neo-liberalism believes that citizens should be turned into consumers instead of being active participants in a democratic society. Lassie faire markets are inimical to natural human modes of behaviour because it is linked to higher depression, eating disorders, deaths of despair and addiction.",
 "Founding father James Madison revealed that the role of Government is to ‘protect the minority of the opulent against the majority’.",
-"Economist Alan Greenspan said that Federal Reserve policy is designed to promote worker insecurity because the higher insecurity, the more you can get away with paying workers lower wages.",
+"Economist Alan Greenspan said that Federal Reserve policy is designed to promote worker insecurity because the higher insecurity the more you can get away with paying workers lower wages.",
 "Writer of famous anti-Soviet books Animal Farm and 1984 George Orwell described himself as a socialist and clarified that the books were not anti-revolution, they were a critique of revolution where ‘Kronstadt’ was unsuccessful and people are unable to ‘put their foot down’.",
 "In totalitarian states phrases such as ‘anti-Soviet’ and ‘anti-Brazilian’ are used to condemn people for their lack of loyalty.",
-"In the early 70s the ‘Powell Memorandum’ said that the capitalist class was the most persecuted class in America and that something needed to be done about the growth in democratic change in the 60s as it threatened their power.",
+"In the early 70s the ‘Powell Memorandum’ said that the capitalist class was the most persecuted class in America and that something needed to be done about the growth in populist movements in the 60s as it threatened their power.",
 "In the ‘Wealth of Nations’ Adam Smith wrote that ‘the principal architects of policy’ were the people who owned the society, in his day they were the ‘merchants and manufacturers.’",
 "By the 1980s ‘General Electric’ could make more profits by shifting money around then it could by producing. They pay zero taxes.",
 "During the 50s and 60s when economic growth was more egalitarian corporate and personal taxes were a lot higher. This is no longer the case. Workers spend their money on goods which there is demand for, the rich spends their money on yachts…",
 "Henry Ford doubled the minimum wage of his employees so they could buy cars. He believed that keeping wages high was essential to a prosperous economy.",
 "One of the leading political scientists in America Martin Gilens, revealed that 70% of the population have no influence on policy, they might as well be in another country.",
 "Adam smith described ‘All for ourselves, nothing for anyone else’ as a ‘vile maxim’ he also believed that the division of labour would lead to equality of outcome.",
-"The book ‘The Industrial Worker, 1840–1860’ documents the beliefs of the working class during the enlightenment. Despite never hearing of Karl Marx they believed that the workers of the factory should own them and critiques capitalism with the slogan ‘gain wealth, forgetting all but self.’",
+"The book ‘The Industrial Worker, 1840–1860’ documents the beliefs of the working class during the enlightenment. Despite never hearing of Karl Marx the workers believed that they had the right to run the factories and they used the slogan ‘gain wealth forgetting all but self’ to criticise capitalism.",
 "20th century intellectual Walter Lipmann said that ‘The public must be put in their place’ so that the responsible men can make decisions without interference from the ‘bewildered herd.’",
 "Advertiser Edward Bernays used feminism to normalise female smoking in the 30s. He admitted that media outlets constituted an ‘invisible Government’ which was the ‘true ruling power’ of the country."]
 let answerStack = [];
@@ -43,6 +43,8 @@ let qNumber = 0;
 
 let partHornSfx = new Audio("sfx/DrumRollAndHorn.ogg");
 let score = $("#score");
+let scoreBtn = $("#score-btn");
+let fourthContainer = $("#fourth-container");
 
 
 startBtn.click(async function(){
@@ -95,7 +97,7 @@ function newQuestion(){
 
     if(qNumber == 23){
         thirdContainer.addClass("hide");
-        score.removeClass("hide");
+        fourthContainer.removeClass("hide");
         showScore();
     }
 }
@@ -110,5 +112,10 @@ async function showScore() {
         }else{
             score.append(" <span style='color: red;'>Insane</span>")
         }
+
+        setTimeout(function(){
+            scoreBtn.removeClass("hide");
+        },3000)
+
     },3869)
 }
