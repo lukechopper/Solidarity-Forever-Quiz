@@ -16,8 +16,8 @@ let bTT = $("#bt-t");
 let bTF = $("#bt-f");
 
 //Questions
-let questionStack = ["Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ which needed to be dealt with. ",
-"Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ which needed to be dealt with.",
+let questionStack = ["Rockefeller created ‘Trilateral Commission’ described the popular social movements of the 60s as a ‘crisis of democracy’, they said that it led to ‘excess democracy’ which needed to be dealt with.",
+"In the Theory of Moral Sentiments, Adam Smith (the father of economics) wrote about how empathy has intrinsic to the human species. Thorstein Veblen wrote about ‘conspicuous consumption’ which meant perverting the human psyche to be materialistic and attracted to the superfluous in order to fuel the capitalist system.",
 "In 2007 just before the financial crash, Wall Street shared 40% of all corporate profits in the US.",
 "In Aristotle’s Politics, Book III, chapter 8, he postulated that a true democracy would result in socialism because the poor majority would have the democratic means to take away the property of the rich.",
 "Historically unions were very effective in achieving labour rights such as the 8-hour day and scrapping child labour. The UK Government deprived workers of the right to strike in 1992.",
@@ -40,6 +40,7 @@ let questionStack = ["Rockefeller created ‘Trilateral Commission’ described 
 "Advertiser Edward Bernays used feminism to normalise female smoking in the 30s. He admitted that media outlets constituted an ‘invisible Government’ which was the ‘true ruling power’ of the country."]
 let answerStack = [];
 let qNumber = 0;
+
 
 let partHornSfx = new Audio("sfx/DrumRollAndHorn.ogg");
 let score = $("#score");
@@ -92,6 +93,7 @@ function newQuestion(){
 
     qNumber++;
 
+
     headerQ.html(`Question ${qNumber} out of 22`);
     qQ.html(questionStack[qNumber - 1]);
 
@@ -100,6 +102,9 @@ function newQuestion(){
         fourthContainer.removeClass("hide");
         showScore();
     }
+
+    
+
 }
 
 async function showScore() {
@@ -119,3 +124,4 @@ async function showScore() {
 
     },3869)
 }
+
