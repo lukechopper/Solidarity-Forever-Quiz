@@ -42,6 +42,12 @@ body {
   cursor: pointer;
 }
 
+#start-score {
+  text-align: center;
+  font-size: 40px;
+  font-family: TheFrontman;
+}
+
 /* Video Screen */
 
 #begin-btn {
