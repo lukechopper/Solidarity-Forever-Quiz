@@ -55,7 +55,7 @@ startBtn.click(async function(){
 
     setTimeout(function(){
         beginBtn.removeClass("hide");
-    },55000);
+    },(73 * 1000));
     
 })
 
