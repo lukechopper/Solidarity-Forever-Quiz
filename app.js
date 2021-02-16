@@ -47,12 +47,17 @@ let score = $("#score");
 let scoreBtn = $("#score-btn");
 let fourthContainer = $("#fourth-container");
 
+//Handle loader
+let loaderContainer = $(".loader-container");
+
 
 startBtn.click(async function(){
     firstContainer.addClass("hide");
+    loaderContainer.removeClass("hide");
     await theVideo.play();
+    loaderContainer.addClass("hide");
     secondContainer.removeClass("hide");
-
+    
     setTimeout(function(){
         beginBtn.removeClass("hide");
     },(73 * 1000));
